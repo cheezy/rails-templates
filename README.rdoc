@@ -11,6 +11,6 @@ Add the following method to your bash profile:
 
 You can then use this "railsapp" command instead of the traditional "rails" one. Simply pass the template name as the first argument:
 
-  railsapp base store
+  railsapp cheezy_basic store
 
-That will generate a Rails app using the base.rb template found here.
+That will generate a Rails app using the cheezy_basic.rb template found here.
