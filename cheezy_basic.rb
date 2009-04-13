@@ -1,8 +1,8 @@
 
 test_gems = <<-END
 
-config.gem "rspec", :version => ">=1.2.2"
-config.gem "rspec-rails", :version => ">=1.2.2"
+config.gem "rspec", :version => ">=1.2.4"
+config.gem "rspec-rails", :version => ">=1.2.4"
 config.gem "cucumber", :version => ">=0.2.3"
 config.gem "webrat", :version => ">=0.4.4"
 END
@@ -14,16 +14,6 @@ generate :rspec
 generate :cucumber
 
 plugin "database_cleaner", :git => "git://github.com/bmabey/database_cleaner.git"
-
-git :init
-
-file ".gitignore", <<-END
-.DS_Store
-log/*.log
-tmp/**/*
-config/database.yml
-db/*.sqlite3
-END
 
 run "mkdir features/plain"
 run "mkdir features/enhanced"
@@ -72,5 +62,16 @@ end
 END
 run "echo '#{enhanced_env}' > features/support/enhanced.rb"
 
+git :init
+
+file ".gitignore", <<-END
+.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+db/*.sqlite3
+END
+
 git :add => "."
 git :commit => "-m 'initial commit'"
+
