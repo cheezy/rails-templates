@@ -5,4 +5,4 @@ plugin "javascript_testing", :git => "git://github.com/relevance/javascript_test
 generate :javascript_testing
 
 git :add => "."
-git :commit => "-m adding javascript_testing"
+git :commit => "-m 'adding javascript_testing'"
