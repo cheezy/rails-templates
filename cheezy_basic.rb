@@ -3,7 +3,7 @@ test_gems = <<-END
 
 config.gem "rspec", :version => ">=1.2.4"
 config.gem "rspec-rails", :version => ">=1.2.4"
-config.gem "cucumber", :version => ">=0.2.3"
+config.gem "cucumber", :version => ">=0.3.0"
 config.gem "webrat", :version => ">=0.4.4"
 END
 run "echo '#{test_gems}' \>\> config/environments/test.rb"
