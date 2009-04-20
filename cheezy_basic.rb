@@ -9,6 +9,9 @@ END
 run "echo '#{test_gems}' \>\> config/environments/test.rb"
 
 rake "gems:install"
+rake "gems:install RAILS_ENV=test"
+rake "gems:build"
+rake "gems:unpack"
 
 generate :rspec
 generate :cucumber
