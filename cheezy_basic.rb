@@ -20,6 +20,7 @@ plugin "database_cleaner", :git => "git://github.com/bmabey/database_cleaner.git
 
 run "mkdir features/plain"
 run "mkdir features/enhanced"
+run "rm -rf test"
 
 cucumber_yml = <<-END
 default: -r features/support/env.rb -r features/support/plain.rb -r features/step_definitions features/plain
