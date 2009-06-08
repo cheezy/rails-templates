@@ -1,9 +1,9 @@
 
 test_gems = <<-END
 
-config.gem "rspec", :version => ">=1.2.4"
-config.gem "rspec-rails", :version => ">=1.2.4"
-config.gem "cucumber", :version => ">=0.3.0"
+config.gem "rspec", :version => ">=1.2.6"
+config.gem "rspec-rails", :version => ">=1.2.6"
+config.gem "cucumber", :version => ">=0.3.11"
 config.gem "webrat", :version => ">=0.4.4"
 END
 run "echo '#{test_gems}' \>\> config/environments/test.rb"
@@ -25,6 +25,8 @@ run "rm -rf test"
 cucumber_yml = <<-END
 default: -r features/support/env.rb -r features/support/plain.rb -r features/step_definitions features/plain
 selenium: -r features/support/env.rb -r features/support/enhanced.rb -r features/step_definitions features/enhanced features/plain
+autotest: -r features/support/env.rb -r features/support/plain.rb -r features/step_definitions features/plain -s
+autotest-all: -r features/support/env.rb -r features/support/plain.rb -r features/step_definitions features/plain -s
 END
 run "echo '#{cucumber_yml}' > cucumber.yml"
 
